@@ -119,19 +119,64 @@ a:hover {
 
 /* Responsive */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
+  header {
+    position: relative;
   }
+
+  /* Hide nav links initially, show a toggle button */
   nav ul {
+    display: none;
     flex-direction: column;
     width: 100%;
   }
-  nav ul li {
-    width: 100%;
+
+  /* Show nav when active (add a class via JS, e.g., 'active') */
+  nav.active ul {
+    display: flex;
   }
-  .btn {
-    width: 100%;
-    text-align: center;
+
+  /* Add hamburger toggle button styles if needed */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
   }
+  /* Hamburger lines styling */
+  .menu-toggle span {
+    display: block;
+    height: 3px;
+    margin: 5px 0;
+    background: #fff;
+  }
+}
+
+/* Adjust content size, font size, and spacing for very small screens */
+@media(max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  /* Larger touch targets for buttons and links */
+  .btn,
+  nav ul li a,
+  .dark-btn {
+    padding: 1rem 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  /* Sections padding for narrow screens */
+  section {
+    padding: 1rem;
+  }
+  
+  /* Reduce header and footer padding */
+  header,
+  footer {
+    padding: 1rem 0.8rem;
+  }
+}
 }
