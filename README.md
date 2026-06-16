@@ -4,7 +4,7 @@ A clean, responsive personal portfolio website built with vanilla HTML, CSS, and
 
 ## Live Preview
 
-> Deploy on GitHub Pages, Netlify, or Vercel — drop in the files and you're live.
+> Deploy on GitHub Pages, Netlify or Vercel — drop in the files and you're live.
 
 ## Features
 
