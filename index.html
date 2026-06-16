@@ -1,125 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neha Nayak | Resume Portfolio</title>
+  <title>Neha Nayak | Software Engineer</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-  <header>
-    <nav>
+  <nav id="navbar">
+    <div class="nav-name">Neha Nayak</div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button onclick="toggleDarkMode()" class="dark-btn" aria-label="Toggle dark mode">🌓</button></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="about">
+    <div class="hero-inner">
+      <p class="hero-tag">Software Engineer · KIIT University</p>
       <h1>Neha Nayak</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><button onclick="toggleDarkMode()" class="dark-btn">🌓</button></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Final-year CSE student at KIIT with internship experience at NALCO. Skilled in Java, Python, C, JavaScript, and
-      React. I enjoy building full-stack web apps using React, Node.js, and Express. Currently working on real-world
-      projects like a recipe generation platform and exploring AI APIs. Open to internships and entry-level roles in web
-      development or software engineering.</p>
-    <a href="Resume30May.pdf" download class="btn">📄 Download Resume</a>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>C, Java, Python</li>
-      <li>HTML, CSS, JavaScript, React</li>
-      <li>MongoDB, AWS</li>
-      <li>Data Structures & Algorithms</li>
-      <li>Cloud Computing</li>
-    </ul>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <div class="edu-entry">
-      <h3>KIIT University</h3>
-      <p>B.Tech in Computer Science and Communication (2022–2026)</p>
-      <p><strong>CGPA:</strong> 9.08 </p>
-    </div>
-    <div class="edu-entry">
-      <h3>Delhi Public School, Nalco, Angul</h3>
-      <p>AISSCE (Class XII), 2021–2022 — <strong>92%</strong></p>
-      <p>AISSE (Class X), 2020–2021 — <strong>94.4%</strong></p>
+      <p class="hero-sub">Java · Python · Machine Learning · Frontend Developer</p>
+      <span class="hero-cgpa">CGPA 9.19</span>
+      <div class="hero-links">
+        <a href="Neha_Resume_SE.pdf" download class="hero-link primary">
+          <i class="ti ti-download" aria-hidden="true"></i> Download Resume
+        </a>
+        <a href="https://github.com/aknneha" target="_blank" class="hero-link outline">
+          <i class="ti ti-brand-github" aria-hidden="true"></i> GitHub
+        </a>
+        <a href="http://www.linkedin.com/in/nehanayak643" target="_blank" class="hero-link outline">
+          <i class="ti ti-brand-linkedin" aria-hidden="true"></i> LinkedIn
+        </a>
+      </div>
     </div>
   </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <p><strong>Systems Intern | NALCO</strong> (May–June 2024)</p>
-    <ul>
-      <li>Worked on system optimization and performance improvement.</li>
-      <li>Handled troubleshooting and debugging tasks.</li>
-      <li>Reduced downtime with performance enhancements.</li>
-    </ul>
-  </section>
+  <main class="page">
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Voice Assistant</h3>
-      <ul>
-        <li>Built a voice-controlled assistant using Python and Google’s Gemini API.</li>
-        <li>Handled voice input/output, parsed user queries, and integrated real-time API responses</li>
-        <li>Showcased natural language processing and real-time interaction capabilities</li>
-      </ul>
-    </div>
-    <div class="project">
-      <h3>Fruit & Vegetable Image Recognition</h3>
-       <ul>
-        <li>Developing  an  API  to  identify  fruits  and  vegeta- bles from user-uploaded images using a deep learning model</li>
-        <li>Trained a custom image classification model on a large dataset for accurate detection</li>
-        <li>Working on integrating API into a web application for user-friendly interactions</li>
-      </ul>
-    </div>
-  </section>
+    <!-- About -->
+    <section class="section reveal">
+      <p class="section-label">About</p>
+      <div class="divider"></div>
+      <p class="about-text">Computer Science graduate (CGPA 9.19) with strong foundations in Java, Python, SQL, and cloud platforms (AWS, Azure). Experienced in building end-to-end applications involving voice AI, deep learning, and web development. Familiar with DevOps fundamentals, Git, JUnit testing, and JDBC. Currently pursuing an advanced course in Machine Learning, Deep Learning, and NLP with end-to-end projects. Seeking a Java Developer or Software Engineer role where I can contribute, grow, and build reliable software systems.</p>
+    </section>
 
-  <section id="certificates">
-    <h2>All Certificates</h2>
-    <ul>
-      <li><a href="https://drive.google.com/file/d/11hvBRHvXLlVTfMGndZ6ToD14-xENpYVw/view?usp=sharing"
-          target="_blank">Business Analytics for Decision
-          Making</a></li>
-      <li><a href="https://drive.google.com/file/d/1XSA6YSJy_GKe3k7a-E_NHRNI6K-9IwV3/view?usp=sharing"
-          target="_blank">Strategy and Game Theory for
-          Management</a></li>
-      <li><a href="https://drive.google.com/file/d/1sAZh4uPKYyD6AJFUWb4Km1SKu9jG7RgS/view?usp=sharing"
-          target="_blank">AWS Certificate</a></li>
-      <li><a href="https://drive.google.com/file/d/14nqX-m2OSfd19E1xeU_akJfnxuSUyWXO/view?usp=sharing"
-          target="_blank">Java (Udemy)</a></li>
+    <!-- Skills -->
+    <section class="section reveal" id="skills">
+      <p class="section-label">Technical Skills</p>
+      <div class="divider"></div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <p class="skill-card-title">Languages</p>
+          <div class="skill-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Python</span>
+            <span class="tag">C</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <p class="skill-card-title">Web & Database</p>
+          <div class="skill-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">React</span>
+            <span class="tag">Oracle SQL</span>
+            <span class="tag">MySQL</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <p class="skill-card-title">Cloud & DevOps</p>
+          <div class="skill-tags">
+            <span class="tag">AWS</span>
+            <span class="tag">Azure</span>
+            <span class="tag">Git</span>
+            <span class="tag">DevOps</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <p class="skill-card-title">Java Ecosystem</p>
+          <div class="skill-tags">
+            <span class="tag">JUnit</span>
+            <span class="tag">Log4j2</span>
+            <span class="tag">OOP</span>
+            <span class="tag">Collections</span>
+            <span class="tag">JDBC</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <p class="skill-card-title">Currently Learning</p>
+          <div class="skill-tags">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">NLP</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    </ul>
-  </section>
+    <!-- Experience -->
+    <section class="section reveal" id="experience">
+      <p class="section-label">Experience</p>
+      <div class="divider"></div>
+      <div class="timeline">
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><strong>Email:</strong> <a href="mailto:nehanayak643@gmail.com">nehanayak643@gmail.com</a></p>
-    <p><strong>Github:</strong> <a href="https://github.com/aknneha">https://github.com/aknneha</a></p>
-    <p><strong>LinkedIn:</strong> <a href="http://www.linkedin.com/in/nehanayak643"
-        target="_blank">linkedin.com/in/nehanayak643</a></p>
-  </section>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <p class="timeline-meta">Dec 2025 – Apr 2026 · 4 months</p>
+          <p class="timeline-title">Java Developer Trainee</p>
+          <p class="timeline-org">Capgemini</p>
+          <div class="timeline-body">
+            <ul>
+              <li>Completed structured training in advanced Java — OOP, Collections, Exception Handling, and JDBC</li>
+              <li>Gained hands-on exposure to DevOps practices, CI/CD pipelines, and version control with Git</li>
+              <li>Worked with cloud platforms AWS and Azure, covering core services and deployment fundamentals</li>
+              <li>Practised database management with Oracle SQL and MySQL, including query optimisation and schema design</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <p class="timeline-meta">May 2024 – Jun 2024 · 2 months</p>
+          <p class="timeline-title">Systems Intern</p>
+          <p class="timeline-org">National Aluminium Company Limited (NALCO)</p>
+          <div class="timeline-body">
+            <ul>
+              <li>Observed server management, system monitoring, and network operations in a large-scale industrial IT environment</li>
+              <li>Gained understanding of how enterprise IT systems support plant operations and ensure reliability</li>
+              <li>Learned cross-department coordination practices in a large public sector organisation</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section reveal" id="projects">
+      <p class="section-label">Projects</p>
+      <div class="divider"></div>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-icon"><i class="ti ti-microphone" aria-hidden="true"></i></div>
+          <p class="project-name">Voice Assistant</p>
+          <p class="project-desc">Built a voice-controlled assistant integrating Google's Gemini API for real-time query responses. Implemented voice input/output pipeline, query parsing, and natural language response generation.</p>
+          <div class="project-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">Gemini API</span>
+            <span class="stack-tag">NLP</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon"><i class="ti ti-camera" aria-hidden="true"></i></div>
+          <p class="project-name">Fruit & Vegetable Recognition</p>
+          <p class="project-desc">Designing and training a custom CNN model to classify fruits and vegetables from user-uploaded images. Built on a large labelled dataset and integrated into a web-based REST API.</p>
+          <div class="project-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">CNN</span>
+            <span class="stack-tag">Deep Learning</span>
+            <span class="stack-tag">REST API</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon"><i class="ti ti-pencil" aria-hidden="true"></i></div>
+          <p class="project-name">Sochfool — Personal Blog</p>
+          <p class="project-desc">Developed a fully responsive blog website with navigation bar, trip diaries, and about sections. Applied front-end layout design principles for clean structure and good user experience.</p>
+          <div class="project-stack">
+            <span class="stack-tag">HTML</span>
+            <span class="stack-tag">CSS</span>
+            <span class="stack-tag">Responsive Design</span>
+          </div>
+          <a href="https://github.com/aknneha/SochFoolProject" target="_blank" class="project-link">
+            <i class="ti ti-brand-github" aria-hidden="true"></i> View on GitHub
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section reveal" id="education">
+      <p class="section-label">Education</p>
+      <div class="divider"></div>
+      <div class="edu-cards">
+        <div class="edu-card">
+          <p class="edu-school">KIIT University</p>
+          <p class="edu-degree">B.Tech — CS &amp; Communication<br>2022 – 2026</p>
+          <span class="edu-score">CGPA 9.19</span>
+        </div>
+        <div class="edu-card">
+          <p class="edu-school">DPS Nalco, Angul</p>
+          <p class="edu-degree">Senior Secondary (Class XII)<br>2021 – 2022</p>
+          <span class="edu-score">92%</span>
+        </div>
+        <div class="edu-card">
+          <p class="edu-school">DPS Nalco, Angul</p>
+          <p class="edu-degree">Secondary (Class X)<br>2019 – 2021</p>
+          <span class="edu-score">94.4%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates -->
+    <section class="section reveal" id="certificates">
+      <p class="section-label">Certifications &amp; Achievements</p>
+      <div class="divider"></div>
+      <div class="cert-list">
+        <div class="cert-item">
+          <span class="cert-name">Business Analytics for Decision Making — Coursera</span>
+          <a href="https://drive.google.com/file/d/11hvBRHvXLlVTfMGndZ6ToD14-xENpYVw/view?usp=sharing" target="_blank" class="cert-link">
+            <i class="ti ti-external-link" aria-hidden="true"></i> View
+          </a>
+        </div>
+        <div class="cert-item">
+          <span class="cert-name">Complete Web Development Bootcamp — Udemy</span>
+        </div>
+        <div class="cert-item">
+          <span class="cert-name">Java Programming: Learn Java — Udemy</span>
+          <a href="https://drive.google.com/file/d/14nqX-m2OSfd19E1xeU_akJfnxuSUyWXO/view?usp=sharing" target="_blank" class="cert-link">
+            <i class="ti ti-external-link" aria-hidden="true"></i> View
+          </a>
+        </div>
+        <div class="cert-item">
+          <span class="cert-name">AWS Certificate</span>
+          <a href="https://drive.google.com/file/d/1sAZh4uPKYyD6AJFUWb4Km1SKu9jG7RgS/view?usp=sharing" target="_blank" class="cert-link">
+            <i class="ti ti-external-link" aria-hidden="true"></i> View
+          </a>
+        </div>
+        <div class="cert-item">
+          <span class="cert-name">🏅 Scholarship awarded for academic excellence in Class XII board examinations</span>
+        </div>
+        <div class="cert-item">
+          <span class="cert-name">🎓 Consistently maintained 9.19 CGPA throughout B.Tech</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section reveal" id="contact">
+      <p class="section-label">Get in Touch</p>
+      <div class="divider"></div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon"><i class="ti ti-mail" aria-hidden="true"></i></div>
+          <div>
+            <p class="contact-label">Email</p>
+            <a href="mailto:nehanayak643@gmail.com" class="contact-val">nehanayak643@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon"><i class="ti ti-brand-github" aria-hidden="true"></i></div>
+          <div>
+            <p class="contact-label">GitHub</p>
+            <a href="https://github.com/aknneha" target="_blank" class="contact-val">github.com/aknneha</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></div>
+          <div>
+            <p class="contact-label">LinkedIn</p>
+            <a href="http://www.linkedin.com/in/nehanayak643" target="_blank" class="contact-val">nehanayak643</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon"><i class="ti ti-phone" aria-hidden="true"></i></div>
+          <div>
+            <p class="contact-label">Phone</p>
+            <a href="tel:+916370387545" class="contact-val">+91 6370387545</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <footer>
-    <p>&copy; 2025 Neha Nayak</p>
+    <p>&copy; 2025 Neha Nayak · Crafted with care</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>
